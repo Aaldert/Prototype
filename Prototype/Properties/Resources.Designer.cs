@@ -63,9 +63,99 @@ namespace Prototype.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Item1 {
+        internal static System.Drawing.Bitmap OverwatchIcon {
             get {
-                object obj = ResourceManager.GetObject("Item1", resourceCulture);
+                object obj = ResourceManager.GetObject("OverwatchIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchIPic1 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchIPic1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchItem1 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchItem1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchItem2 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchItem2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchItem3 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchItem3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchItem4 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchItem4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchPic2 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchPic2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchPic3 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchPic3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OverwatchPic4 {
+            get {
+                object obj = ResourceManager.GetObject("OverwatchPic4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PersonalItem1 {
+            get {
+                object obj = ResourceManager.GetObject("PersonalItem1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

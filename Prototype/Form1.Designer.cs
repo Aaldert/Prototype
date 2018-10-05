@@ -33,39 +33,43 @@
             this.groepenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ownUserProfileNameLabel = new System.Windows.Forms.Label();
-            this.ownUserProfileInfo = new System.Windows.Forms.TextBox();
+            this.Groups = new System.Windows.Forms.FlowLayoutPanel();
+            this.mainLabel = new System.Windows.Forms.Label();
+            this.mainText = new System.Windows.Forms.TextBox();
+            this.mainPic = new System.Windows.Forms.PictureBox();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.otherUserProfileNameLabel = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.otherUserProfileReacties = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.otherUserProfileReactiesLabel = new System.Windows.Forms.Label();
+            this.otherUserProfileDicussiesLabel = new System.Windows.Forms.Label();
+            this.otherUserProfileNameLabel1 = new System.Windows.Forms.Label();
+            this.otherUserProfileNameLabel3 = new System.Windows.Forms.Label();
             this.otherUserProfileNameLabel2 = new System.Windows.Forms.Label();
+            this.otherUserProfileSpullen = new System.Windows.Forms.FlowLayoutPanel();
             this.spul1 = new System.Windows.Forms.PictureBox();
-            this.spul2 = new System.Windows.Forms.PictureBox();
-            this.spul3 = new System.Windows.Forms.PictureBox();
-            this.spul4 = new System.Windows.Forms.PictureBox();
-            this.spul5 = new System.Windows.Forms.PictureBox();
-            this.spul6 = new System.Windows.Forms.PictureBox();
-            this.spul7 = new System.Windows.Forms.PictureBox();
-            this.spul8 = new System.Windows.Forms.PictureBox();
             this.otherUserProfilePhoto = new System.Windows.Forms.PictureBox();
-            this.ownUserProfilePhoto = new System.Windows.Forms.PictureBox();
+            this.otherUserProfileDiscussies = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.upperBorderMenu = new System.Windows.Forms.PictureBox();
             this.upperBorder = new System.Windows.Forms.PictureBox();
             this.Username.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPic)).BeginInit();
             this.panel2.SuspendLayout();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.otherUserProfileReacties.SuspendLayout();
+            this.panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.otherUserProfileSpullen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spul1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otherUserProfilePhoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ownUserProfilePhoto)).BeginInit();
+            this.otherUserProfileDiscussies.SuspendLayout();
+            this.panel24.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upperBorderMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.upperBorder)).BeginInit();
             this.SuspendLayout();
@@ -111,74 +115,150 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.Controls.Add(this.ownUserProfileNameLabel);
-            this.panel1.Controls.Add(this.ownUserProfileInfo);
-            this.panel1.Controls.Add(this.ownUserProfilePhoto);
+            this.panel1.Controls.Add(this.Groups);
+            this.panel1.Controls.Add(this.mainLabel);
+            this.panel1.Controls.Add(this.mainText);
+            this.panel1.Controls.Add(this.mainPic);
             this.panel1.Location = new System.Drawing.Point(235, 149);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 184);
+            this.panel1.Size = new System.Drawing.Size(994, 844);
             this.panel1.TabIndex = 3;
             this.panel1.Visible = false;
             // 
-            // ownUserProfileNameLabel
+            // Groups
             // 
-            this.ownUserProfileNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ownUserProfileNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(147)))), ((int)(((byte)(199)))));
-            this.ownUserProfileNameLabel.Location = new System.Drawing.Point(173, 22);
-            this.ownUserProfileNameLabel.Name = "ownUserProfileNameLabel";
-            this.ownUserProfileNameLabel.Size = new System.Drawing.Size(183, 23);
-            this.ownUserProfileNameLabel.TabIndex = 2;
-            this.ownUserProfileNameLabel.Text = "Welcome Username";
+            this.Groups.Location = new System.Drawing.Point(28, 158);
+            this.Groups.Name = "Groups";
+            this.Groups.Size = new System.Drawing.Size(895, 510);
+            this.Groups.TabIndex = 4;
             // 
-            // ownUserProfileInfo
+            // mainLabel
             // 
-            this.ownUserProfileInfo.Enabled = false;
-            this.ownUserProfileInfo.Location = new System.Drawing.Point(173, 48);
-            this.ownUserProfileInfo.Multiline = true;
-            this.ownUserProfileInfo.Name = "ownUserProfileInfo";
-            this.ownUserProfileInfo.ReadOnly = true;
-            this.ownUserProfileInfo.Size = new System.Drawing.Size(247, 94);
-            this.ownUserProfileInfo.TabIndex = 1;
-            this.ownUserProfileInfo.Text = ">Vandaag zijn er 18 nieuwe producten geplaatst.\r\n>U heeft 3 nieuwe biedingen ontv" +
-    "angen.\r\n";
+            this.mainLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mainLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(147)))), ((int)(((byte)(199)))));
+            this.mainLabel.Location = new System.Drawing.Point(173, 22);
+            this.mainLabel.Name = "mainLabel";
+            this.mainLabel.Size = new System.Drawing.Size(183, 23);
+            this.mainLabel.TabIndex = 2;
+            this.mainLabel.Text = "Welcome Default";
+            // 
+            // mainText
+            // 
+            this.mainText.Enabled = false;
+            this.mainText.Location = new System.Drawing.Point(173, 48);
+            this.mainText.Multiline = true;
+            this.mainText.Name = "mainText";
+            this.mainText.ReadOnly = true;
+            this.mainText.Size = new System.Drawing.Size(247, 94);
+            this.mainText.TabIndex = 1;
+            this.mainText.Text = "> Default\r\n";
+            // 
+            // mainPic
+            // 
+            this.mainPic.Image = global::Prototype.Properties.Resources.UserIcon;
+            this.mainPic.Location = new System.Drawing.Point(28, 22);
+            this.mainPic.Name = "mainPic";
+            this.mainPic.Size = new System.Drawing.Size(120, 120);
+            this.mainPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.mainPic.TabIndex = 0;
+            this.mainPic.TabStop = false;
             // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel2.Controls.Add(this.otherUserProfileReacties);
+            this.panel2.Controls.Add(this.otherUserProfileReactiesLabel);
+            this.panel2.Controls.Add(this.otherUserProfileDicussiesLabel);
+            this.panel2.Controls.Add(this.otherUserProfileNameLabel1);
+            this.panel2.Controls.Add(this.otherUserProfileNameLabel3);
             this.panel2.Controls.Add(this.otherUserProfileNameLabel2);
-            this.panel2.Controls.Add(this.flowLayoutPanel1);
-            this.panel2.Controls.Add(this.otherUserProfileNameLabel);
+            this.panel2.Controls.Add(this.otherUserProfileSpullen);
             this.panel2.Controls.Add(this.otherUserProfilePhoto);
-            this.panel2.Location = new System.Drawing.Point(235, 352);
+            this.panel2.Controls.Add(this.otherUserProfileDiscussies);
+            this.panel2.Location = new System.Drawing.Point(235, 149);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(994, 384);
+            this.panel2.Size = new System.Drawing.Size(994, 844);
             this.panel2.TabIndex = 4;
             this.panel2.Visible = false;
             // 
-            // otherUserProfileNameLabel
+            // otherUserProfileReacties
             // 
-            this.otherUserProfileNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.otherUserProfileNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(147)))), ((int)(((byte)(199)))));
-            this.otherUserProfileNameLabel.Location = new System.Drawing.Point(91, 22);
-            this.otherUserProfileNameLabel.Name = "otherUserProfileNameLabel";
-            this.otherUserProfileNameLabel.Size = new System.Drawing.Size(183, 23);
-            this.otherUserProfileNameLabel.TabIndex = 2;
-            this.otherUserProfileNameLabel.Text = "Username profiel";
+            this.otherUserProfileReacties.Controls.Add(this.panel28);
+            this.otherUserProfileReacties.Location = new System.Drawing.Point(31, 607);
+            this.otherUserProfileReacties.Name = "otherUserProfileReacties";
+            this.otherUserProfileReacties.Size = new System.Drawing.Size(429, 114);
+            this.otherUserProfileReacties.TabIndex = 11;
             // 
-            // flowLayoutPanel1
+            // panel28
             // 
-            this.flowLayoutPanel1.Controls.Add(this.spul1);
-            this.flowLayoutPanel1.Controls.Add(this.spul2);
-            this.flowLayoutPanel1.Controls.Add(this.spul3);
-            this.flowLayoutPanel1.Controls.Add(this.spul4);
-            this.flowLayoutPanel1.Controls.Add(this.spul5);
-            this.flowLayoutPanel1.Controls.Add(this.spul6);
-            this.flowLayoutPanel1.Controls.Add(this.spul7);
-            this.flowLayoutPanel1.Controls.Add(this.spul8);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(28, 143);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(429, 216);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.panel28.Controls.Add(this.textBox8);
+            this.panel28.Controls.Add(this.pictureBox8);
+            this.panel28.Location = new System.Drawing.Point(3, 3);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(200, 50);
+            this.panel28.TabIndex = 11;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Enabled = false;
+            this.textBox8.Location = new System.Drawing.Point(50, 0);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(150, 50);
+            this.textBox8.TabIndex = 10;
+            this.textBox8.Text = ">Vandaag zijn er 18 nieuwe producten geplaatst.\r\n>U heeft 3 nieuwe biedingen ontv" +
+    "angen.\r\n";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::Prototype.Properties.Resources.PersonalItem1;
+            this.pictureBox8.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 10;
+            this.pictureBox8.TabStop = false;
+            // 
+            // otherUserProfileReactiesLabel
+            // 
+            this.otherUserProfileReactiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherUserProfileReactiesLabel.ForeColor = System.Drawing.Color.Black;
+            this.otherUserProfileReactiesLabel.Location = new System.Drawing.Point(28, 581);
+            this.otherUserProfileReactiesLabel.Name = "otherUserProfileReactiesLabel";
+            this.otherUserProfileReactiesLabel.Size = new System.Drawing.Size(213, 23);
+            this.otherUserProfileReactiesLabel.TabIndex = 10;
+            this.otherUserProfileReactiesLabel.Text = "Reacties";
+            // 
+            // otherUserProfileDicussiesLabel
+            // 
+            this.otherUserProfileDicussiesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherUserProfileDicussiesLabel.ForeColor = System.Drawing.Color.Black;
+            this.otherUserProfileDicussiesLabel.Location = new System.Drawing.Point(25, 427);
+            this.otherUserProfileDicussiesLabel.Name = "otherUserProfileDicussiesLabel";
+            this.otherUserProfileDicussiesLabel.Size = new System.Drawing.Size(213, 23);
+            this.otherUserProfileDicussiesLabel.TabIndex = 9;
+            this.otherUserProfileDicussiesLabel.Text = "Discussies";
+            // 
+            // otherUserProfileNameLabel1
+            // 
+            this.otherUserProfileNameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherUserProfileNameLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(147)))), ((int)(((byte)(199)))));
+            this.otherUserProfileNameLabel1.Location = new System.Drawing.Point(0, 0);
+            this.otherUserProfileNameLabel1.Name = "otherUserProfileNameLabel1";
+            this.otherUserProfileNameLabel1.Size = new System.Drawing.Size(183, 23);
+            this.otherUserProfileNameLabel1.TabIndex = 2;
+            this.otherUserProfileNameLabel1.Text = "Username profiel";
+            // 
+            // otherUserProfileNameLabel3
+            // 
+            this.otherUserProfileNameLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.otherUserProfileNameLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(147)))), ((int)(((byte)(199)))));
+            this.otherUserProfileNameLabel3.Location = new System.Drawing.Point(24, 401);
+            this.otherUserProfileNameLabel3.Name = "otherUserProfileNameLabel3";
+            this.otherUserProfileNameLabel3.Size = new System.Drawing.Size(213, 23);
+            this.otherUserProfileNameLabel3.TabIndex = 5;
+            this.otherUserProfileNameLabel3.Text = "Username\'s activiteiten";
             // 
             // otherUserProfileNameLabel2
             // 
@@ -190,78 +270,23 @@
             this.otherUserProfileNameLabel2.TabIndex = 4;
             this.otherUserProfileNameLabel2.Text = "Username\'s spullen";
             // 
+            // otherUserProfileSpullen
+            // 
+            this.otherUserProfileSpullen.Controls.Add(this.spul1);
+            this.otherUserProfileSpullen.Location = new System.Drawing.Point(28, 143);
+            this.otherUserProfileSpullen.Name = "otherUserProfileSpullen";
+            this.otherUserProfileSpullen.Size = new System.Drawing.Size(429, 216);
+            this.otherUserProfileSpullen.TabIndex = 3;
+            // 
             // spul1
             // 
-            this.spul1.Image = global::Prototype.Properties.Resources.Item1;
+            this.spul1.Image = global::Prototype.Properties.Resources.PersonalItem1;
             this.spul1.Location = new System.Drawing.Point(3, 3);
             this.spul1.Name = "spul1";
             this.spul1.Size = new System.Drawing.Size(100, 100);
             this.spul1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spul1.TabIndex = 0;
             this.spul1.TabStop = false;
-            // 
-            // spul2
-            // 
-            this.spul2.Location = new System.Drawing.Point(109, 3);
-            this.spul2.Name = "spul2";
-            this.spul2.Size = new System.Drawing.Size(100, 100);
-            this.spul2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul2.TabIndex = 1;
-            this.spul2.TabStop = false;
-            // 
-            // spul3
-            // 
-            this.spul3.Location = new System.Drawing.Point(215, 3);
-            this.spul3.Name = "spul3";
-            this.spul3.Size = new System.Drawing.Size(100, 100);
-            this.spul3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul3.TabIndex = 2;
-            this.spul3.TabStop = false;
-            // 
-            // spul4
-            // 
-            this.spul4.Location = new System.Drawing.Point(321, 3);
-            this.spul4.Name = "spul4";
-            this.spul4.Size = new System.Drawing.Size(100, 100);
-            this.spul4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul4.TabIndex = 3;
-            this.spul4.TabStop = false;
-            // 
-            // spul5
-            // 
-            this.spul5.Location = new System.Drawing.Point(3, 109);
-            this.spul5.Name = "spul5";
-            this.spul5.Size = new System.Drawing.Size(100, 100);
-            this.spul5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul5.TabIndex = 4;
-            this.spul5.TabStop = false;
-            // 
-            // spul6
-            // 
-            this.spul6.Location = new System.Drawing.Point(109, 109);
-            this.spul6.Name = "spul6";
-            this.spul6.Size = new System.Drawing.Size(100, 100);
-            this.spul6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul6.TabIndex = 5;
-            this.spul6.TabStop = false;
-            // 
-            // spul7
-            // 
-            this.spul7.Location = new System.Drawing.Point(215, 109);
-            this.spul7.Name = "spul7";
-            this.spul7.Size = new System.Drawing.Size(100, 100);
-            this.spul7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul7.TabIndex = 6;
-            this.spul7.TabStop = false;
-            // 
-            // spul8
-            // 
-            this.spul8.Location = new System.Drawing.Point(321, 109);
-            this.spul8.Name = "spul8";
-            this.spul8.Size = new System.Drawing.Size(100, 100);
-            this.spul8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.spul8.TabIndex = 7;
-            this.spul8.TabStop = false;
             // 
             // otherUserProfilePhoto
             // 
@@ -273,15 +298,43 @@
             this.otherUserProfilePhoto.TabIndex = 0;
             this.otherUserProfilePhoto.TabStop = false;
             // 
-            // ownUserProfilePhoto
+            // otherUserProfileDiscussies
             // 
-            this.ownUserProfilePhoto.Image = global::Prototype.Properties.Resources.UserIcon;
-            this.ownUserProfilePhoto.Location = new System.Drawing.Point(28, 22);
-            this.ownUserProfilePhoto.Name = "ownUserProfilePhoto";
-            this.ownUserProfilePhoto.Size = new System.Drawing.Size(120, 120);
-            this.ownUserProfilePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ownUserProfilePhoto.TabIndex = 0;
-            this.ownUserProfilePhoto.TabStop = false;
+            this.otherUserProfileDiscussies.Controls.Add(this.panel24);
+            this.otherUserProfileDiscussies.Location = new System.Drawing.Point(28, 453);
+            this.otherUserProfileDiscussies.Name = "otherUserProfileDiscussies";
+            this.otherUserProfileDiscussies.Size = new System.Drawing.Size(429, 114);
+            this.otherUserProfileDiscussies.TabIndex = 8;
+            // 
+            // panel24
+            // 
+            this.panel24.Controls.Add(this.textBox3);
+            this.panel24.Controls.Add(this.pictureBox3);
+            this.panel24.Location = new System.Drawing.Point(3, 3);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(200, 50);
+            this.panel24.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(50, 0);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(150, 50);
+            this.textBox3.TabIndex = 10;
+            this.textBox3.Text = "10 hobbies die je waarschijnelijk nog nooit geprobeerd hebt!\r\n";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::Prototype.Properties.Resources.PersonalItem1;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // upperBorderMenu
             // 
@@ -310,16 +363,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(239)))), ((int)(((byte)(237)))));
-            this.ClientSize = new System.Drawing.Size(1271, 1112);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(1271, 1220);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.Username);
             this.Controls.Add(this.upperBorderMenu);
             this.Controls.Add(this.upperBorder);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Screen";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Prototype 1.0.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -327,18 +380,19 @@
             this.Username.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainPic)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            this.otherUserProfileReacties.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.otherUserProfileSpullen.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spul1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.spul8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.otherUserProfilePhoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ownUserProfilePhoto)).EndInit();
+            this.otherUserProfileDiscussies.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upperBorderMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.upperBorder)).EndInit();
             this.ResumeLayout(false);
@@ -355,23 +409,28 @@
         private System.Windows.Forms.ToolStripMenuItem groepenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem profielToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox ownUserProfilePhoto;
-        private System.Windows.Forms.Label ownUserProfileNameLabel;
-        private System.Windows.Forms.TextBox ownUserProfileInfo;
+        private System.Windows.Forms.PictureBox mainPic;
+        private System.Windows.Forms.Label mainLabel;
+        private System.Windows.Forms.TextBox mainText;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label otherUserProfileNameLabel;
+        private System.Windows.Forms.Label otherUserProfileNameLabel1;
         private System.Windows.Forms.PictureBox otherUserProfilePhoto;
         private System.Windows.Forms.Label otherUserProfileNameLabel2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel otherUserProfileSpullen;
         private System.Windows.Forms.PictureBox spul1;
-        private System.Windows.Forms.PictureBox spul2;
-        private System.Windows.Forms.PictureBox spul3;
-        private System.Windows.Forms.PictureBox spul4;
-        private System.Windows.Forms.PictureBox spul5;
-        private System.Windows.Forms.PictureBox spul6;
-        private System.Windows.Forms.PictureBox spul7;
-        private System.Windows.Forms.PictureBox spul8;
+        private System.Windows.Forms.FlowLayoutPanel otherUserProfileReacties;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label otherUserProfileReactiesLabel;
+        private System.Windows.Forms.Label otherUserProfileDicussiesLabel;
+        private System.Windows.Forms.Label otherUserProfileNameLabel3;
+        private System.Windows.Forms.FlowLayoutPanel otherUserProfileDiscussies;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.FlowLayoutPanel Groups;
     }
 }
 
