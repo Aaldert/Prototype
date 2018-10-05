@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Prototype.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="MainScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Logic\Group.cs" />
     <Compile Include="Logic\Groups.cs" />
@@ -57,8 +60,8 @@
     <Compile Include="Logic\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,6 +87,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\UpperBorder.png" />
   </ItemGroup>
   <ItemGroup>
@@ -96,10 +102,55 @@
     <None Include="Resources\UserIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Item1.png" />
+    <None Include="Resources\item1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icon.png" />
+    <None Include="Resources\item2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item81.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pic1.png" />
@@ -117,13 +168,70 @@
     <None Include="Resources\pic5.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\item2.png" />
+    <None Include="Resources\pic6.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\item3.png" />
+    <None Include="Resources\pic7.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\item4.png" />
+    <None Include="Resources\pic8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item62.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item72.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\item82.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic71.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic81.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic91.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

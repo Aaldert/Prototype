@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +37,7 @@ namespace Prototype
             foreach (Group group in _user.GetGroup().GetGroups())
             {
                 Groups.Controls.Add(CreateGroupPanel(group));
+                //panel3
                 panels.Add(group.GetName(), CreatePanel3(group));
             }
 
@@ -147,7 +149,7 @@ namespace Prototype
             galleryLabel.Size = new System.Drawing.Size(176, 23);
             galleryLabel.TabIndex = 10;
             galleryLabel.Text = "Gallerij";
-
+            
             //1.2 reactionLabel
             Label reactionLabel = new Label();
             reactionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,10 +188,11 @@ namespace Prototype
                 Label itemInfo = new Label();
                 itemInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 itemInfo.ForeColor = System.Drawing.Color.Black;
-                itemInfo.Location = new System.Drawing.Point(25, 59);
                 itemInfo.Name = "itemInfo";
-                itemInfo.Size = new System.Drawing.Size(77, 13);
+                itemInfo.Size = new System.Drawing.Size(50, 13);
                 itemInfo.TabIndex = 9;
+                itemInfo.Location = new System.Drawing.Point(22, 59);
+                itemInfo.TextAlign = ContentAlignment.MiddleCenter;
                 itemInfo.Text = item.GetName();
 
                 //1.4.1.1 items
@@ -198,15 +201,16 @@ namespace Prototype
                 items.Controls.Add(itemInfo);
                 items.Location = new System.Drawing.Point(3, 3);
                 items.Name = "Items";
-                items.Size = new System.Drawing.Size(90, 75);
+                items.Size = new System.Drawing.Size(70, 75);
                 items.TabIndex = 12;
 
                 itemsFlow.Controls.Add(items);
             }
             itemsFlow.Location = new System.Drawing.Point(3, 3);
             itemsFlow.Name = "ItemsFlow";
-            itemsFlow.Size = new System.Drawing.Size(288, 167);
+            itemsFlow.Size = new System.Drawing.Size(250, 167);
             itemsFlow.TabIndex = 0;
+            itemsFlow.AutoScroll = true;
 
 
             //1.4.2 reactionFlow
@@ -216,11 +220,11 @@ namespace Prototype
                 //1.4.2.1.1 text
                 TextBox text = new TextBox();
                 text.Enabled = false;
-                text.Location = new System.Drawing.Point(76, 3);
+                text.Location = new System.Drawing.Point(38, 3);
                 text.Multiline = true;
                 text.Name = "text";
                 text.ReadOnly = true;
-                text.Size = new System.Drawing.Size(195, 69);
+                text.Size = new System.Drawing.Size(240, 69);
                 text.TabIndex = 4;
                 text.Text = str;
 
@@ -230,7 +234,7 @@ namespace Prototype
                 userPic.Location = new System.Drawing.Point(3, 2);
                 userPic.Name = "userPic";
                 userPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                userPic.Size = new System.Drawing.Size(70, 70);
+                userPic.Size = new System.Drawing.Size(30, 30);
                 userPic.TabIndex = 11;
                 userPic.TabStop = false;
 
@@ -240,15 +244,16 @@ namespace Prototype
                 reaction.Controls.Add(userPic);
                 reaction.Location = new System.Drawing.Point(3, 3);
                 reaction.Name = "Reaction";
-                reaction.Size = new System.Drawing.Size(274, 75);
+                reaction.Size = new System.Drawing.Size(280, 75);
                 reaction.TabIndex = 7;
 
                 reactionsFlow.Controls.Add(reaction);
             }
             reactionsFlow.Location = new System.Drawing.Point(297, 3);
             reactionsFlow.Name = "ReactionsFlow";
-            reactionsFlow.Size = new System.Drawing.Size(288, 167);
+            reactionsFlow.Size = new System.Drawing.Size(308, 167);
             reactionsFlow.TabIndex = 1;
+            reactionsFlow.AutoScroll = true;
 
             //1.4.3 GallaryFlow
             FlowLayoutPanel gallaryFlow = new FlowLayoutPanel();
@@ -260,15 +265,16 @@ namespace Prototype
                 photo.Location = new System.Drawing.Point(3, 3);
                 photo.Name = "Photo";
                 photo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-                photo.Size = new System.Drawing.Size(90, 75);
+                photo.Size = new System.Drawing.Size(90, 80);
                 photo.TabIndex = 8;
 
                 gallaryFlow.Controls.Add(photo);
             }
             gallaryFlow.Location = new System.Drawing.Point(591, 3);
             gallaryFlow.Name = "GallaryFlow";
-            gallaryFlow.Size = new System.Drawing.Size(288, 167);
+            gallaryFlow.Size = new System.Drawing.Size(310, 167);
             gallaryFlow.TabIndex = 1;
+            gallaryFlow.AutoScroll = true;
 
             //1.4 groupFlow
             FlowLayoutPanel groupFlow = new FlowLayoutPanel();
@@ -277,7 +283,7 @@ namespace Prototype
             groupFlow.Controls.Add(gallaryFlow);
             groupFlow.Location = new System.Drawing.Point(3, 67);
             groupFlow.Name = "GroupFlow";
-            groupFlow.Size = new System.Drawing.Size(882, 170);
+            groupFlow.Size = new System.Drawing.Size(898, 170);
             groupFlow.TabIndex = 7;
 
             //1.5 groupPhoto
@@ -312,9 +318,9 @@ namespace Prototype
             groupPanel.Controls.Add(groupInfoLabel);
             groupPanel.Location = new System.Drawing.Point(3, 3);
             groupPanel.Name = group.GetName();
-            groupPanel.Size = new System.Drawing.Size(889, 240);
+            groupPanel.Size = new System.Drawing.Size(890, 240);
             groupPanel.TabIndex = 3;
-
+            groupPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             return groupPanel;
         }
 
@@ -388,31 +394,33 @@ namespace Prototype
             return panel3;
         }
 
-        //Home Tab
+        //Home Tab 
         public TabPage CreateHomeTabPage(Group group)
         {
-            //3.1.1 galleryFlow
+            //3.1.1 galleryFlow CHECK
             FlowLayoutPanel galleryFlow = new FlowLayoutPanel();
             foreach (Image photo in group.GetGallerij())
             {
-                //3.1.1.1 gallaryPhoto
+                //3.1.1.1 gallaryPhoto CHECK
                 PictureBox gallaryPhoto = new PictureBox();
                 gallaryPhoto.Image = photo;
                 gallaryPhoto.Location = new System.Drawing.Point(3, 3);
                 gallaryPhoto.Name = "galleryPhoto";
-                gallaryPhoto.Size = new System.Drawing.Size(120, 120);
+                gallaryPhoto.Size = new System.Drawing.Size(60, 60);
                 gallaryPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 gallaryPhoto.TabIndex = 1;
                 gallaryPhoto.TabStop = false;
+                gallaryPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
                 galleryFlow.Controls.Add(gallaryPhoto);
             }
             galleryFlow.Location = new System.Drawing.Point(10, 466);
             galleryFlow.Name = "galleryFlow";
-            galleryFlow.Size = new System.Drawing.Size(756, 171);
+            galleryFlow.Size = new System.Drawing.Size(900, 171);
             galleryFlow.TabIndex = 7;
+            galleryFlow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-            //3.1.2 galleryLabel
+            //3.1.2 galleryLabel CHECK
             Label galleryLabel = new Label();
             galleryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             galleryLabel.ForeColor = System.Drawing.Color.Black;
@@ -422,27 +430,57 @@ namespace Prototype
             galleryLabel.TabIndex = 7;
             galleryLabel.Text = "Gallerij";
 
-            //3.1.3 discussionsFlow
-            FlowLayoutPanel discussionsFlow = new FlowLayoutPanel();
+            //3.1.3 discussionsTable CHECK
+            TableLayoutPanel discussionsTable = new TableLayoutPanel();
+            discussionsTable.ColumnCount = 5;
+            discussionsTable.RowCount = 4;
+
+            discussionsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
+            discussionsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10));
+            discussionsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
+            discussionsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10));
+            discussionsTable.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
+
+            discussionsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            discussionsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            discussionsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            discussionsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+            discussionsTable.RowStyles.Add(new RowStyle(SizeType.Absolute, 40));
+
+            //discussionsTable.CellBorderStyle = TableLayoutPanelCellBorderStyle.Single;
+
+            int count = 0;
             foreach (string discussion in group.GetDiscussies())
             {
+                //3.1.3.1 discussionBox Check
                 Label discussionBox = new Label();
                 discussionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 discussionBox.ForeColor = System.Drawing.Color.Black;
-                discussionBox.Location = new System.Drawing.Point(3, 0);
+                discussionBox.Location = new System.Drawing.Point(0, 0);
                 discussionBox.Name = "discussionBox";
-                discussionBox.Size = new System.Drawing.Size(128, 23);
+                discussionBox.Size = new System.Drawing.Size(300, 200);
                 discussionBox.TabIndex = 8;
                 discussionBox.Text = discussion;
+                discussionBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-                discussionsFlow.Controls.Add(discussionBox);
+                if (count <= 3)
+                {
+                    discussionsTable.Controls.Add(discussionBox, 0, count);
+                }
+                else
+                {
+                    discussionsTable.Controls.Add(discussionBox, 2, (count - 4));
+                }
+                
+                count++;
             }
-            discussionsFlow.Location = new System.Drawing.Point(10, 249);
-            discussionsFlow.Name = "DiscussiesFlow";
-            discussionsFlow.Size = new System.Drawing.Size(756, 171);
-            discussionsFlow.TabIndex = 6;
+            discussionsTable.Location = new System.Drawing.Point(10, 249);
+            discussionsTable.Name = "discussionsTable";
+            discussionsTable.Size = new System.Drawing.Size(900, 171);
+            discussionsTable.TabIndex = 6;
+            discussionsTable.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-            //3.1.4 discussionsLabel
+            //3.1.4 discussionsLabel CHECK
             Label discussionsLabel = new Label();
             discussionsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             discussionsLabel.ForeColor = System.Drawing.Color.Black;
@@ -452,29 +490,32 @@ namespace Prototype
             discussionsLabel.TabIndex = 6;
             discussionsLabel.Text = "Discussies";
 
-            //3.1.5 veilingenFlow
+            //3.1.5 veilingenFlow CHECK
             FlowLayoutPanel veilingenFlow = new FlowLayoutPanel();
             foreach (Item item in group.GetVeilingItems())
             {
                 //3.1.5.1.1 itemName
                 Label itemName = new Label();
+                itemName.TextAlign = ContentAlignment.MiddleCenter;
                 itemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 itemName.ForeColor = System.Drawing.Color.Black;
-                itemName.Location = new System.Drawing.Point(51, 4);
                 itemName.Name = "itemName";
-                itemName.Size = new System.Drawing.Size(128, 23);
                 itemName.TabIndex = 9;
                 itemName.Text = item.GetName();
+                itemName.Location = new System.Drawing.Point(4, 4);
+                itemName.Size = new Size(120, 30);
+                itemName.BorderStyle = BorderStyle.FixedSingle;
 
                 //3.1.5.1.2 itemPhoto
                 PictureBox itemPhoto = new PictureBox();
-                itemPhoto.Image = global::Prototype.Properties.Resources.OverwatchItem1;
-                itemPhoto.Location = new System.Drawing.Point(55, 34);
+                itemPhoto.Image = item.GetPhoto();
+                itemPhoto.Location = new System.Drawing.Point(4, 34);
                 itemPhoto.Name = "itemPhoto";
                 itemPhoto.Size = new System.Drawing.Size(120, 120);
                 itemPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
                 itemPhoto.TabIndex = 5;
                 itemPhoto.TabStop = false;
+                itemPhoto.BorderStyle = BorderStyle.FixedSingle;
 
 
                 //3.1.5.1 itemPanel
@@ -483,17 +524,19 @@ namespace Prototype
                 itemPanel.Controls.Add(itemPhoto);
                 itemPanel.Location = new System.Drawing.Point(3, 3);
                 itemPanel.Name = "itemPanel";
-                itemPanel.Size = new System.Drawing.Size(242, 160);
+                itemPanel.Size = new System.Drawing.Size(130, 160);
                 itemPanel.TabIndex = 0;
+                //itemPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
                 veilingenFlow.Controls.Add(itemPanel);
             }
             veilingenFlow.Location = new System.Drawing.Point(10, 34);
             veilingenFlow.Name = "VeilingenFlow";
-            veilingenFlow.Size = new System.Drawing.Size(756, 171);
+            veilingenFlow.Size = new System.Drawing.Size(900, 171);
             veilingenFlow.TabIndex = 5;
+            veilingenFlow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
 
-            //3.1.6 veilingenLabel
+            //3.1.6 veilingenLabel CHECK
             Label veilingenLabel = new Label();
             veilingenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             veilingenLabel.ForeColor = System.Drawing.Color.Black;
@@ -507,7 +550,7 @@ namespace Prototype
             TabPage home = new TabPage();
             home.Controls.Add(galleryFlow);
             home.Controls.Add(galleryLabel);
-            home.Controls.Add(discussionsFlow);
+            home.Controls.Add(discussionsTable);
             home.Controls.Add(discussionsLabel);
             home.Controls.Add(veilingenFlow);
             home.Controls.Add(veilingenLabel);

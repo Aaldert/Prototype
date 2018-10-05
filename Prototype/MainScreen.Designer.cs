@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Screen));
             this.Username = new System.Windows.Forms.MenuStrip();
             this.userMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.groepenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +81,7 @@
             this.Username.BackColor = System.Drawing.Color.White;
             this.Username.Dock = System.Windows.Forms.DockStyle.None;
             this.Username.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.userMenu});
+                this.userMenu});
             this.Username.Location = new System.Drawing.Point(953, 20);
             this.Username.Name = "Username";
             this.Username.Size = new System.Drawing.Size(80, 24);
@@ -115,6 +116,7 @@
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.Groups);
             this.panel1.Controls.Add(this.mainLabel);
             this.panel1.Controls.Add(this.mainText);
@@ -155,7 +157,7 @@
             // 
             // mainPic
             // 
-            this.mainPic.Image = global::Prototype.Properties.Resources.UserIcon;
+            this.mainPic.Image = ((System.Drawing.Image)(resources.GetObject("mainPic.Image")));
             this.mainPic.Location = new System.Drawing.Point(28, 22);
             this.mainPic.Name = "mainPic";
             this.mainPic.Size = new System.Drawing.Size(120, 120);
@@ -212,7 +214,7 @@
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Image = global::Prototype.Properties.Resources.PersonalItem1;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
             this.pictureBox8.Location = new System.Drawing.Point(0, 0);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
@@ -280,7 +282,7 @@
             // 
             // spul1
             // 
-            this.spul1.Image = global::Prototype.Properties.Resources.PersonalItem1;
+            this.spul1.Image = global::Prototype.Properties.Resources.item1;
             this.spul1.Location = new System.Drawing.Point(3, 3);
             this.spul1.Name = "spul1";
             this.spul1.Size = new System.Drawing.Size(100, 100);
@@ -290,7 +292,7 @@
             // 
             // otherUserProfilePhoto
             // 
-            this.otherUserProfilePhoto.Image = global::Prototype.Properties.Resources.UserIcon;
+            this.otherUserProfilePhoto.Image = ((System.Drawing.Image)(resources.GetObject("otherUserProfilePhoto.Image")));
             this.otherUserProfilePhoto.Location = new System.Drawing.Point(28, 22);
             this.otherUserProfilePhoto.Name = "otherUserProfilePhoto";
             this.otherUserProfilePhoto.Size = new System.Drawing.Size(57, 57);
@@ -328,7 +330,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::Prototype.Properties.Resources.PersonalItem1;
+            this.pictureBox3.Image = global::Prototype.Properties.Resources.item1;
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
@@ -340,7 +342,7 @@
             // 
             this.upperBorderMenu.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.upperBorderMenu.BackColor = System.Drawing.Color.White;
-            this.upperBorderMenu.Image = global::Prototype.Properties.Resources.UpperBorder3;
+            this.upperBorderMenu.Image = ((System.Drawing.Image)(resources.GetObject("upperBorderMenu.Image")));
             this.upperBorderMenu.Location = new System.Drawing.Point(235, 0);
             this.upperBorderMenu.Name = "upperBorderMenu";
             this.upperBorderMenu.Size = new System.Drawing.Size(994, 131);
@@ -351,7 +353,7 @@
             // upperBorder
             // 
             this.upperBorder.Dock = System.Windows.Forms.DockStyle.Top;
-            this.upperBorder.Image = global::Prototype.Properties.Resources.UpperBorder;
+            this.upperBorder.Image = ((System.Drawing.Image)(resources.GetObject("upperBorder.Image")));
             this.upperBorder.Location = new System.Drawing.Point(0, 0);
             this.upperBorder.Name = "upperBorder";
             this.upperBorder.Size = new System.Drawing.Size(1271, 131);
