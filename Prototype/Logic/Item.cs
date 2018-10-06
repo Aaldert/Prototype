@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace Prototype.Logic
 {
     public class Item
     {
-        private System.Drawing.Image _photo;
+        private Image _photo;
         private int _price;
         private string _name;
 

@@ -1,11 +1,14 @@
-﻿namespace Prototype
+﻿using System.ComponentModel;
+using System.Windows.Forms;
+
+namespace Prototype
 {
     partial class Screen
     {
         /// <summary>
         /// Required designer variable.
         /// </summary>
-        private System.ComponentModel.IContainer components = null;
+        private IContainer components = null;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -33,6 +36,7 @@
             this.userMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.groepenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testOtherProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Groups = new System.Windows.Forms.FlowLayoutPanel();
             this.mainLabel = new System.Windows.Forms.Label();
@@ -92,7 +96,8 @@
             // 
             this.userMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.groepenToolStripMenuItem,
-            this.profielToolStripMenuItem});
+            this.profielToolStripMenuItem,
+            this.testOtherProfileToolStripMenuItem});
             this.userMenu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F);
             this.userMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(159)))), ((int)(((byte)(207)))));
             this.userMenu.Name = "userMenu";
@@ -102,21 +107,27 @@
             // groepenToolStripMenuItem
             // 
             this.groepenToolStripMenuItem.Name = "groepenToolStripMenuItem";
-            this.groepenToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.groepenToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.groepenToolStripMenuItem.Text = "Groepen";
             this.groepenToolStripMenuItem.Click += new System.EventHandler(this.groepenToolStripMenuItem_Click);
             // 
             // profielToolStripMenuItem
             // 
             this.profielToolStripMenuItem.Name = "profielToolStripMenuItem";
-            this.profielToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.profielToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
             this.profielToolStripMenuItem.Text = "Profiel";
             this.profielToolStripMenuItem.Click += new System.EventHandler(this.profielToolStripMenuItem_Click);
+            // 
+            // testOtherProfileToolStripMenuItem
+            // 
+            this.testOtherProfileToolStripMenuItem.Name = "testOtherProfileToolStripMenuItem";
+            this.testOtherProfileToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+            this.testOtherProfileToolStripMenuItem.Text = "[Test]OtherProfile";
+            this.testOtherProfileToolStripMenuItem.Click += new System.EventHandler(this.testOtherProfileToolStripMenuItem_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.Groups);
             this.panel1.Controls.Add(this.mainLabel);
             this.panel1.Controls.Add(this.mainText);
@@ -377,6 +388,7 @@
             this.Name = "Screen";
             this.Text = "Prototype 1.0.1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Click += new System.EventHandler(this.Screen_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.Username.ResumeLayout(false);
             this.Username.PerformLayout();
@@ -404,35 +416,36 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox upperBorder;
-        private System.Windows.Forms.PictureBox upperBorderMenu;
-        private System.Windows.Forms.MenuStrip Username;
-        private System.Windows.Forms.ToolStripMenuItem userMenu;
-        private System.Windows.Forms.ToolStripMenuItem groepenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem profielToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox mainPic;
-        private System.Windows.Forms.Label mainLabel;
-        private System.Windows.Forms.TextBox mainText;
-        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label otherUserProfileNameLabel1;
-        private System.Windows.Forms.PictureBox otherUserProfilePhoto;
-        private System.Windows.Forms.Label otherUserProfileNameLabel2;
-        private System.Windows.Forms.FlowLayoutPanel otherUserProfileSpullen;
-        private System.Windows.Forms.PictureBox spul1;
-        private System.Windows.Forms.FlowLayoutPanel otherUserProfileReacties;
-        private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label otherUserProfileReactiesLabel;
-        private System.Windows.Forms.Label otherUserProfileDicussiesLabel;
-        private System.Windows.Forms.Label otherUserProfileNameLabel3;
-        private System.Windows.Forms.FlowLayoutPanel otherUserProfileDiscussies;
-        private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.FlowLayoutPanel Groups;
+        private PictureBox upperBorder;
+        private PictureBox upperBorderMenu;
+        private MenuStrip Username;
+        private ToolStripMenuItem userMenu;
+        private ToolStripMenuItem groepenToolStripMenuItem;
+        private ToolStripMenuItem profielToolStripMenuItem;
+        private ToolStripMenuItem testOtherProfileToolStripMenuItem;
+        private Panel panel1;
+        private PictureBox mainPic;
+        private Label mainLabel;
+        private TextBox mainText;
+        private PageSetupDialog pageSetupDialog1;
+        private Panel panel2;
+        private Label otherUserProfileNameLabel1;
+        private PictureBox otherUserProfilePhoto;
+        private Label otherUserProfileNameLabel2;
+        private FlowLayoutPanel otherUserProfileSpullen;
+        private PictureBox spul1;
+        private FlowLayoutPanel otherUserProfileReacties;
+        private Panel panel28;
+        private TextBox textBox8;
+        private PictureBox pictureBox8;
+        private Label otherUserProfileReactiesLabel;
+        private Label otherUserProfileDicussiesLabel;
+        private Label otherUserProfileNameLabel3;
+        private FlowLayoutPanel otherUserProfileDiscussies;
+        private Panel panel24;
+        private TextBox textBox3;
+        private PictureBox pictureBox3;
+        private FlowLayoutPanel Groups;
     }
 }
 

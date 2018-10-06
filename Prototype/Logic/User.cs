@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Prototype.Properties;
 
 namespace Prototype.Logic
 {
@@ -17,29 +14,29 @@ namespace Prototype.Logic
 
         public User()
         {
-            _userName = "Test User";
-            _profilePhoto = Properties.Resources.icon;
-            _userDescription = $"> 18 Nieuwe aanbiedingen vandaag!\n> 5 Nieuwe vrienden";
+            _userName = "Daniel Compagner";
+            _profilePhoto = Resources.icon;
+            _userDescription = "> 18 Nieuwe aanbiedingen vandaag!\r\n> 5 Nieuwe vrienden";
 
-            Image userItem11 = global::Prototype.Properties.Resources.item1;
-            Item userItem1 = new Item(userItem11, 10, userItem11.ToString());
-            Image userItem21 = global::Prototype.Properties.Resources.item2;
-            Item userItem2 = new Item(userItem21, 10, userItem11.ToString());
-            Image userItem31 = global::Prototype.Properties.Resources.item3;
+            Image userItem11 = Resources.item1;
+            Item userItem1 = new Item(userItem11, 10, "Schoen");
+            Image userItem21 = Resources.item2;
+            Item userItem2 = new Item(userItem21, 10, "Duckie");
+            Image userItem31 = Resources.item3;
             Item userItem3 = new Item(userItem31, 10, userItem11.ToString());
-            Image userItem41 = global::Prototype.Properties.Resources.item4;
+            Image userItem41 = Resources.item4;
             Item userItem4 = new Item(userItem41, 10, userItem11.ToString());
-            Image userItem51 = global::Prototype.Properties.Resources.item5;
+            Image userItem51 = Resources.item5;
             Item userItem5 = new Item(userItem51, 10, userItem11.ToString());
-            Image userItem61 = global::Prototype.Properties.Resources.item6;
+            Image userItem61 = Resources.item6;
             Item userItem6 = new Item(userItem61, 10, userItem11.ToString());
-            Image userItem71 = global::Prototype.Properties.Resources.item7;
-            Item userItem7 = new Item(userItem71, 10, userItem11.ToString());
-            Image userItem81 = global::Prototype.Properties.Resources.item8;
-            Item userItem8 = new Item(userItem81, 10, userItem11.ToString());
+            Image userItem71 = Resources.item7;
+            Item userItem7 = new Item(userItem71, 10, "Schaakbord");
+            Image userItem81 = Resources.item8;
+            Item userItem8 = new Item(userItem81, 10, "Schaakklok");
 
 
-            _items = new List<Item>() { userItem1, userItem2, userItem3, userItem4, userItem5, userItem6, userItem7, userItem8 };
+            _items = new List<Item> { userItem1, userItem2, userItem3, userItem4, userItem5, userItem6, userItem7, userItem8 };
             _groups = new Groups();
         }
 
